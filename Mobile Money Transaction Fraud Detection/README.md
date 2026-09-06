@@ -4,7 +4,7 @@ A machine learning pipeline for detecting fraudulent mobile-money transactions f
 
 ## Overview
 
-Mobile-money platforms process high volumes of transactions in which fraud is rare but costly, making it a classic class-imbalanced classification problem. This project builds an end-to-end workflow — from raw transaction data to a trained, evaluated, and serialized model — that flags transactions as fraudulent or legitimate based on behavioral, temporal, and merchant/channel-related signals.
+Mobile-money platforms process high volumes of transactions in which fraud is rare but costly, making it a classic class-imbalanced classification problem. This project builds an end-to-end workflow, from raw transaction data to a trained, evaluated, and serialized model that flags transactions as fraudulent or legitimate based on behavioral, temporal, and merchant/channel-related signals.
 
 The notebook walks through the full data science lifecycle:
 
@@ -18,7 +18,7 @@ The notebook walks through the full data science lifecycle:
 - **Data cleaning**: handles missing values, duplicate detection, and datatype correction (datetime parsing, categorical encoding, memory-efficient integer types).
 - **Exploratory analysis**: visualizes class imbalance, transaction amount distribution, monthly fraud trends, and fraud rates broken down by channel, merchant category, location, age group, weekday/weekend, and bank.
 - **Feature engineering awareness**: works with a rich, pre-engineered feature set including rolling transaction statistics (24h/7d/total), velocity and risk scores, and cyclical time encodings.
-- **Model comparison**: trains and evaluates four classifiers — Logistic Regression, Decision Tree, Random Forest, and HistGradientBoosting — using class-weight balancing to address fraud rarity.
+- **Model comparison**: trains and evaluates four classifiers — Logistic Regression, Decision Tree, Random Forest, and HistGradientBoosting, using class-weight balancing to address fraud rarity.
 - **Hyperparameter tuning**: uses `RandomizedSearchCV` to tune the HistGradientBoosting and Random Forest models.
 - **Evaluation suite**: reports confusion matrices, PR-AUC, ROC-AUC, precision, recall, and F1-score for each model, and selects the best-performing model automatically.
 - **Model persistence**: serializes the final selected model to disk for downstream use.
@@ -138,6 +138,4 @@ Contributions are welcome. If you'd like to improve the analysis, add new models
 
 Please keep notebook cells well-documented and avoid committing large data files or trained model artifacts unless necessary.
 
-## License
 
-No license file is currently included with this project. Consider adding one (e.g., MIT, Apache 2.0) to clarify how others may use, modify, or distribute this work.
