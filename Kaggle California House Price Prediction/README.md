@@ -4,7 +4,7 @@ A machine learning notebook that predicts median house values in California dist
 
 ## Overview
 
-This project builds an end-to-end regression pipeline to estimate `median_house_value` for California housing blocks based on features such as location, income, and housing characteristics. It walks through the full data science workflow - exploratory data analysis, data cleaning, preprocessing, model comparison, hyperparameter tuning, and model interpretation — culminating in a serialized model ready for inference on new data.
+This project builds an end-to-end regression pipeline to estimate `median_house_value` for California housing blocks based on features such as location, income, and housing characteristics. It walks through the full data science workflow - exploratory data analysis, data cleaning, preprocessing, model comparison, hyperparameter tuning, and model interpretation - culminating in a serialized model ready for inference on new data.
 
 The project exists as a practical, reproducible example of applying classical regression techniques (linear, regularized, and ensemble-based) to a real-world tabular dataset, with attention to common pitfalls such as capped target values and skewed features.
 
@@ -26,7 +26,7 @@ The project exists as a practical, reproducible example of applying classical re
 - **Core libraries**:
   - `numpy`, `pandas` - Data manipulation
   - `matplotlib`, `seaborn` - Visualization
-  - `scikit-learn` — Preprocessing, Pipelines, Models, and Evaluation (`train_test_split`, `GridSearchCV`, `Pipeline`, `ColumnTransformer`, `StandardScaler`, `OneHotEncoder`, `PolynomialFeatures`, `SimpleImputer`, `LinearRegression`, `Ridge`, `Lasso`, `RandomForestRegressor`, `GradientBoostingRegressor`, `SVR`, and regression metrics)
+  - `scikit-learn` - Preprocessing, Pipelines, Models, and Evaluation (`train_test_split`, `GridSearchCV`, `Pipeline`, `ColumnTransformer`, `StandardScaler`, `OneHotEncoder`, `PolynomialFeatures`, `SimpleImputer`, `LinearRegression`, `Ridge`, `Lasso`, `RandomForestRegressor`, `GradientBoostingRegressor`, `SVR`, and regression metrics)
   - `joblib` - Model serialization
 
 ## Installation / Setup
