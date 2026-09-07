@@ -4,23 +4,23 @@ A machine learning pipeline for detecting fraudulent mobile-money transactions f
 
 ## Overview
 
-Mobile-money platforms process high volumes of transactions in which fraud is rare but costly, making it a classic class-imbalanced classification problem. This project builds an end-to-end workflow, from raw transaction data to a trained, evaluated, and serialized model that flags transactions as fraudulent or legitimate based on behavioral, temporal, and merchant/channel-related signals.
+Mobile-money platforms process high volumes of transactions in which fraud is rare but costly, making it a classic class-imbalanced classification problem. This project builds an end-to-end workflow, from raw transaction data to a trained, evaluated, and serialized model that flags transactions as fraudulent or legitimate based on behavioral, temporal and merchant/channel-related signals.
 
 The notebook walks through the full data science lifecycle:
 
 1. Data loading and cleaning
 2. Exploratory data analysis (EDA)
 3. Feature preprocessing and model development
-4. Model evaluation, tuning, and selection
+4. Model evaluation, tuning and selection
 
 ## Key Features
 
-- **Data cleaning**: handles missing values, duplicate detection, and datatype correction (datetime parsing, categorical encoding, memory-efficient integer types).
-- **Exploratory analysis**: visualizes class imbalance, transaction amount distribution, monthly fraud trends, and fraud rates broken down by channel, merchant category, location, age group, weekday/weekend, and bank.
-- **Feature engineering awareness**: works with a rich, pre-engineered feature set including rolling transaction statistics (24h/7d/total), velocity and risk scores, and cyclical time encodings.
-- **Model comparison**: trains and evaluates four classifiers — Logistic Regression, Decision Tree, Random Forest, and HistGradientBoosting, using class-weight balancing to address fraud rarity.
+- **Data cleaning**: handles missing values, duplicate detection and datatype correction (datetime parsing, categorical encoding, memory-efficient integer types).
+- **Exploratory analysis**: visualizes class imbalance, transaction amount distribution, monthly fraud trends and fraud rates broken down by channel, merchant category, location, age group, weekday/weekend and bank.
+- **Feature engineering awareness**: works with a rich, pre-engineered feature set including rolling transaction statistics (24h/7d/total), velocity and risk scores and cyclical time encodings.
+- **Model comparison**: trains and evaluates four classifiers - Logistic Regression, Decision Tree, Random Forest and HistGradientBoosting - using class-weight balancing to address fraud rarity.
 - **Hyperparameter tuning**: uses `RandomizedSearchCV` to tune the HistGradientBoosting and Random Forest models.
-- **Evaluation suite**: reports confusion matrices, PR-AUC, ROC-AUC, precision, recall, and F1-score for each model, and selects the best-performing model automatically.
+- **Evaluation suite**: reports confusion matrices, PR-AUC, ROC-AUC, precision, recall and F1-score for each model and selects the best-performing model automatically.
 - **Model persistence**: serializes the final selected model to disk for downstream use.
 
 ## Tech Stack / Dependencies
@@ -28,10 +28,10 @@ The notebook walks through the full data science lifecycle:
 - **Language**: Python 3.13
 - **Environment**: Jupyter Notebook
 - **Core libraries**:
-  - `pandas`, `numpy` — data manipulation
-  - `matplotlib`, `seaborn` — visualization
-  - `scikit-learn` — preprocessing, modeling, evaluation, and hyperparameter search
-  - `joblib` — model serialization
+  - `pandas`, `numpy` - Data Manipulation
+  - `matplotlib`, `seaborn` — Visualization
+  - `scikit-learn` — Preprocessing, Modeling, Evaluation, and Hyperparameter Tuning
+  - `joblib` — Model Serialization
 
 ## Installation / Setup
 
@@ -50,7 +50,7 @@ The notebook walks through the full data science lifecycle:
    pip install numpy pandas matplotlib seaborn scikit-learn joblib jupyter
    ```
 
-4. **Add the dataset**: place `nibss_fraud_dataset.csv` in the same directory as the notebook. The dataset is expected to include a `transaction_id` index column along with transaction, customer, and behavioral features (see [Project Structure](#project-structure) below).
+4. **Add the dataset**: download `nibss_fraud_dataset.csv` from [https://www.kaggle.com/datasets/hendurhance/nibsss-fraud-dataset] and place it in the same directory as the notebook. The dataset is expected to include a `transaction_id` index column along with transaction, customer, and behavioral features (see [Project Structure](#project-structure) below).
 
 5. **Launch Jupyter**:
 
@@ -112,6 +112,11 @@ This project has no environment variables or external configuration files. The o
 
 ## Project Structure
 
+### Dataset
+
+- **Source**: [https://www.kaggle.com/datasets/hendurhance/nibsss-fraud-dataset]
+- **File**: `nibss_fraud_dataset.csv`
+
 The notebook expects a dataset with the following (approximate) schema:
 
 | Category | Columns |
@@ -125,7 +130,7 @@ The notebook expects a dataset with the following (approximate) schema:
 
 **Outputs:**
 
-- `fraud_detection_model.pkl` — the serialized final model, saved via `joblib` after training and selection.
+- `fraud_detection_model.pkl` - the serialized final model, saved via `joblib` after training and selection.
 
 ## Contributing
 
@@ -137,5 +142,3 @@ Contributions are welcome. If you'd like to improve the analysis, add new models
 4. Open a pull request describing the change and its motivation.
 
 Please keep notebook cells well-documented and avoid committing large data files or trained model artifacts unless necessary.
-
-
