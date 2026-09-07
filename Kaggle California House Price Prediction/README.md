@@ -13,7 +13,7 @@ The project exists as a practical, reproducible example of applying classical re
 - **Exploratory Data Analysis (EDA)**: distribution plots, outlier detection (boxplots), correlation analysis, and geographic visualization of price patterns across California.
 - **Data cleaning**: removal of artificially capped target values (houses valued at exactly $500,000) and log-transformation of heavily right-skewed features (`total_rooms`, `total_bedrooms`, `population`, `households`).
 - **Preprocessing pipeline**: `ColumnTransformer`-based pipeline combining median imputation and standard scaling for numerical features with one-hot encoding for categorical features (`ocean_proximity`).
-- **Model comparison**: benchmarks seven regression approaches — Linear, Ridge, Lasso, Polynomial (Ridge), Support Vector Regression, Random Forest, and Gradient Boosting.
+- **Model comparison**: benchmarks seven regression approaches - Linear, Ridge, Lasso, Polynomial (Ridge), Support Vector Regression, Random Forest, and Gradient Boosting.
 - **Hyperparameter tuning**: `GridSearchCV` (5-fold cross-validation) for Ridge, Random Forest, and Gradient Boosting models.
 - **Model evaluation and diagnostics**: MAE, MSE, RMSE, and R² metrics, plus actual-vs-predicted and residual plots to assess fit and heteroscedasticity.
 - **Feature importance / interpretability**: feature importances for tree-based models or coefficients for linear models, depending on which model performs best.
